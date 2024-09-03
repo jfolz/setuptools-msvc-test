@@ -7,6 +7,8 @@ jobs:
     name: Test EnvironmentInfo
     runs-on: windows-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
       - name: Install setuptools
         run: pip install setuptools>=74.1.0
       - name: Build SDist
