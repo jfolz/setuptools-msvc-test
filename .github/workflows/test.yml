@@ -1,0 +1,13 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    name: Test EnvironmentInfo
+    runs-on: windows-latest
+    steps:
+      - name: Install setuptools
+        run: pip install setuptools>=74.1.0
+      - name: Build SDist
+        run: python test.py
